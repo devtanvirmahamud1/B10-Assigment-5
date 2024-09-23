@@ -15,16 +15,11 @@ function showSectionById(id){
     document.getElementById('show-history').classList.add('hidden');
     //Show the Button
     document.getElementById(id).classList.remove('hidden');
-    
-}
 
-// function displayDate(){
-//      document.getElementById('showDate').innerText = new Date();   
-// }
+}
 
 function displayDate(){
     const currentDate = Date();
     const formattedDate = currentDate.toLocaleString();
-    document.getElementById('showDate').textContent = formattedDate;
+    return formattedDate;
 }
-
