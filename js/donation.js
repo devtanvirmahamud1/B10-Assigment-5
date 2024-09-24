@@ -9,11 +9,14 @@ document.getElementById('btn-noakhali-donate')
             alert('Failed to Donate');
             return;
         }
-
-        // should be add a common function
-
+        else if(addMoney < 0){
+            alert('Something is Wrong !!!');
+            return;
+        }
+        
         const accountBalance = getTextFieldValueByID('account-balance');
-        const accountNewBalacne = accountBalance - addMoney;
+        const accountNewBalacne = accountBalance - addMoney; 
+
         if (addMoney > accountBalance) {
             alert('Insuficient Balance');
         }
@@ -48,6 +51,10 @@ document.getElementById('btn-feni-donate')
         const feniTitle = document.getElementById('feni-title').innerText;
         if (isNaN(addMoney)) {
             alert('Failed to Donate');
+            return;
+        }
+        else if(addMoney < 0){
+            alert('Something is Wrong !!!');
             return;
         }
 
@@ -90,6 +97,10 @@ document.getElementById('btn-queta-donate')
         const quetaTitle = document.getElementById('queta-title').innerText;
         if (isNaN(addMoney)) {
             alert('Failed to Donate');
+            return;
+        }
+        else if(addMoney < 0){
+            alert('Something is Wrong !!!');
             return;
         }
 
